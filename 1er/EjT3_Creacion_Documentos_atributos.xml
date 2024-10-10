@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<minecraftItems lang="es">
+    <item id="262" crafteable="true" enchantable="false">
+        <name>Cama</name>
+        <type>Bloque</type>
+        <rarity>Común</rarity>
+        <damage>1</damage>
+        <description>Una simple cama para pasar la noche</description>
+        <materials>
+            <material id="221">bloque de madera</material>
+            <material id="892">bloque de lana</material>
+        </materials>
+        <destroyable>false</destroyable>
+
+    </item>
+
+    <item id="189" crafteable="true" enchantable="true">
+        <name>Pico de piedra</name>
+        <type>Herramientas</type>
+        <rarity>Común</rarity>
+        <damage>4</damage>
+        <description>Pico de piedra para poder minar.</description>
+        <materials>
+            <material id="195">bloque de piedra</material>
+            <material id="25">palo</material>
+        </materials>
+        <enchantments>
+            <enchantment id="502">Irrompibilidad</enchantment>
+            <enchantment id="611">Eficiencia</enchantment>
+            <enchantment id="584">Suerte</enchantment>
+        </enchantments>
+        <destroyable>true</destroyable>
+        <wear>0.2</wear>
+    </item>
+
+    <item id="723" crafteable="true" enchantable="true">
+        <name>Caña de pescar con zanahoria</name>
+        <type>Herramienta</type>
+        <rarity>Épico</rarity>
+        <damage>5</damage>
+        <description>Caña de pescar con zanahoria para ir con un cerdo</description>
+        <crafteable>true</crafteable>
+        <materials>
+            <material id="291">caña de pescar</material>
+            <material id="443">zanahoria</material>
+        </materials>
+        <enchantments>
+            <enchantment id="502">Irrompibilidad</enchantment>
+            <enchantment id="498">Reparación</enchantment>
+        </enchantments>
+        <destroyable>true</destroyable>
+        <wear>0.1</wear>
+    </item>
+</minecraftItems>
