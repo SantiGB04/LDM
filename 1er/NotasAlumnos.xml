@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notasalumnos lang="es">
+    <alumnos>
+        <alumno nia="25836914">
+            <nombre>Federico</nombre>
+            <apellido>Mulet</apellido>
+            <modulos>
+                <modulo>
+                    <nombre>Implantación</nombre>
+                    <nota>6</nota>
+                </modulo>
+                <modulo>
+                    <Nombre>Planificación</Nombre>
+                    <nota>2</nota>
+                </modulo>
+                <modulo>
+                    <nombre>BBDD</nombre>
+                    <nota>4</nota>
+                </modulo>
+                <modulo>
+                    <nombre>FOL</nombre>
+                    <nota>7</nota>
+                </modulo>
+            </modulos>
+        </alumno>
+    </alumnos>
+
+</notasalumnos>
