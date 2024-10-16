@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum lang="es">
+    <datos>
+        <nombre>Mohammed Sumbul</nombre>
+        <apellido>Serra Puig</apellido>
+        <nacimiento>11/09/2001</nacimiento>
+        <direccion>Murla 12</direccion>
+        <telf>611586912</telf>
+        <correo>ASjhfdksdfgjklsbn23@gmail.com</correo>
+        <descripcion>Esto es un ejemplo porque no se qué escribir aquí</descripcion>
+    </datos>
+    <formaciones>
+        <formacion>
+            <nombre>IES Matematic Vicent Caselles Costa</nombre>
+            <ano>1994-1999</ano>
+            <notamedia>5</notamedia>
+        </formacion>
+        <formacion>
+            <nombre>IES Zimbabwe</nombre>
+            <ano>2005-2007</ano>
+            <notamedia>5</notamedia>
+        </formacion>
+    </formaciones>
+
+    <trabajos>
+        <trabajo>
+            <nombre>Burger King</nombre>
+            <ano>2006-2018</ano>
+            <descripcion>Limpieza de platos</descripcion>
+            <cargo>Aseo</cargo>
+        </trabajo>
+    </trabajos>
+
+    <idiomas>
+        <idioma>
+            <nombre>Valencià</nombre>
+            <certificado>C2</certificado>
+        </idioma>
+    </idiomas>
+
+    <habilidades>
+        <descripcion>Hacer la mandanga</descripcion>
+        <descripcion>Vender la mandanga</descripcion>
+    </habilidades>
+
+</curriculum>
