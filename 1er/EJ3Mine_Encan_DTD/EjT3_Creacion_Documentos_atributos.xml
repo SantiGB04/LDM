@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE minecraftItems SYSTEM "Minecraft.dtd">
+
 <minecraftItems lang="es">
     <item id="262" crafteable="true" enchantable="false">
         <name>Cama</name>

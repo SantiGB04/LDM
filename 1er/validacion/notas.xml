@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE notas SYSTEM "notas.dtd">
+
+<notas>
+    <alumno dni="_1A" genero="Hombre">
+        <nombre>Stivinov</nombre>
+        <apellidos>Sendra</apellidos>
+    </alumno>
+    <alumno dni="_2A" genero="Mujer">
+        <nombre>Asaea</nombre>
+        <apellidos>AADbgffdg</apellidos>
+    </alumno>
+</notas>
