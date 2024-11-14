@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE escena SYSTEM "Figuras.dtd">
+
+<escena>
+    <rectangulo>
+        <posicion>150, 400</posicion>
+        <altura>120</altura>
+        <ancho>150</ancho>
+    </rectangulo>
+
+    <circunferencia>
+        <posicion>400, 400</posicion>
+        <radio>100</radio>
+    </circunferencia>
+    
+    <linea>
+        <origen>300, 520</origen>
+        <destino>400, 400</destino> 
+    </linea>
+</escena>

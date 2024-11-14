@@ -1,0 +1,30 @@
+<!ELEMENT minecraftItems (item+)>
+<!ATTLIST minecraftItems lang (es|en) #REQUIRED>
+
+<!ELEMENT item (name, damage?, description, materials?, wear?, enchantments?)> 
+
+
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST item id ID #REQUIRED
+        rarity (Comun | Raro | Epico ) #REQUIRED
+        crafteable (true | false) #REQUIRED
+        enchantable (true | false) #REQUIRED
+        destroyable (true | false) #REQUIRED
+        type (bloque | herramienta | arma | entidades) #REQUIRED>
+
+
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT damage (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT wear (#PCDATA)>
+
+
+<!ELEMENT materials (material+)>
+<!ELEMENT material (#PCDATA)>
+<!ATTLIST material id ID #REQUIRED>
+
+<!ELEMENT enchantments (enchantment+)>
+<!ELEMENT enchantment (#PCDATA)>
+<!ATTLIST enchantment id ID #REQUIRED>

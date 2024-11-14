@@ -1,0 +1,15 @@
+<!ELEMENT escena (rectangulo*, circunferencia*, linea*)>
+
+<!ELEMENT rectangulo (posicion, altura, ancho)>
+
+<!ELEMENT circunferencia (posicion, radio)>
+
+<!ELEMENT linea (origen, destino)>
+
+
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT ancho (#PCDATA)>
+<!ELEMENT radio (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destino (#PCDATA)>

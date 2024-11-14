@@ -2,38 +2,33 @@
 <!DOCTYPE minecraftItems SYSTEM "Minecraft.dtd">
 
 <minecraftItems lang="es">
-    <item id="A214">
+    <item id="A214" rarity="Comun">
         <name>Pollo Crudo</name>
         <type>Comida</type>
-        <rarity>Común</rarity>
         <damage>1</damage>
         <description>Pollo crudo la cual se puede cocinar</description>
     </item>
-    <item id="A307">
+    <item id="A307" rarity="Raro">
         <name>Tulipán</name>
         <type>Bloque</type>
-        <rarity>Raro</rarity>
         <damage>1</damage>
         <description>Flor rara de algún bioma</description>
     </item>
-    <item id="A189">
+    <item id="A189" rarity="Comun"> 
         <name>Tijeras</name>
         <type>Herramientas</type>
-        <rarity>Común</rarity>
         <damage>4</damage>
         <description>Tijeras para cortar lana y otras cosas.</description>
     </item>
-    <item id="A999">
+    <item id="A999" rarity="Epico">
         <name>Palo debug</name>
         <type>Arma</type>
-        <rarity>Legendario</rarity>
         <damage>1000</damage>
         <description>Palo del debug (No crafteable)</description>
     </item>
-    <item id="A723">
+    <item id="A723" rarity="Epico">
         <name>Caña de pescar con zanahoria</name>
         <type>Herramienta</type>
-        <rarity>Épico</rarity>
         <damage>5</damage>
         <description>Caña de pescar con zanahoria para ir con un cerdo</description>
     </item>
