@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE partida SYSTEM "Tres_en_raya.dtd">
+<partida id="A1" fecha="15/11/2024">
+    <jugadores>
+        <jugador nombre="Marcelo" ficha="X"/>
+        <jugador nombre="Carlos" ficha="O"/>
+    </jugadores>
+    <tablero>
+        <posicion casilla="A1">X</posicion>
+        <posicion casilla="B2">O</posicion>
+        <posicion casilla="C1">X</posicion>
+        <posicion casilla="A2">O</posicion>
+    </tablero>
+    <turnos>
+        <turno num_turno="1" jugador="Marcelo" posicion="A1">X</turno>
+        <turno num_turno="2" jugador="Carlos" posicion="B2">O</turno>
+        <turno num_turno="3" jugador="Marcelo" posicion="C1">X</turno>
+        <turno num_turno="4" jugador="Carlos" posicion="A2">O</turno>
+    </turnos>
+</partida>

@@ -1,0 +1,21 @@
+<!ELEMENT partida (jugadores, tablero, turnos)>
+<!ATTLIST partida 
+                id ID #REQUIRED
+                fecha CDATA #REQUIRED>
+
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador (#PCDATA)>
+<!ATTLIST jugador 
+            nombre CDATA #REQUIRED
+            ficha (X | O) #REQUIRED>
+
+<!ELEMENT tablero (posicion+)>
+<!ELEMENT posicion (#PCDATA)>
+<!ATTLIST posicion casilla (A1 | A2 | A3 | B1 | B2 | B3 | C1 | C2 | C3) #REQUIRED>
+
+<!ELEMENT turnos (turno+)>
+<!ELEMENT turno (#PCDATA)>
+<!ATTLIST turno 
+            num_turno CDATA #REQUIRED
+            jugador CDATA #REQUIRED
+            posicion (A1 | A2 | A3 | B1 | B2 | B3 | C1 | C2 | C3) #REQUIRED>
