@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE curriculum SYSTEM "EjT3_Curriculum.dtd">
 <curriculum lang="es">
     <datos>
         <nombre>Mohammed Sumbul</nombre>
@@ -11,36 +12,40 @@
     </datos>
     <formaciones>
         <formacion>
-            <nombre>IES Matematic Vicent Caselles Costa</nombre>
-            <ano>1994-1999</ano>
+            <nombre_form>IES Matematic Vicent Caselles Costa</nombre_form>
+            <ano_form>1994-1999</ano_form>
             <notamedia>5</notamedia>
         </formacion>
         <formacion>
-            <nombre>IES Zimbabwe</nombre>
-            <ano>2005-2007</ano>
+            <nombre_form>IES Zimbabwe</nombre_form>
+            <ano_form>2005-2007</ano_form>
             <notamedia>5</notamedia>
         </formacion>
     </formaciones>
 
     <trabajos>
         <trabajo>
-            <nombre>Burger King</nombre>
-            <ano>2006-2018</ano>
-            <descripcion>Limpieza de platos</descripcion>
+            <nombre_trab>Burger King</nombre_trab>
+            <ano_trab>2006-2018</ano_trab>
+            <descripcion_trab>Limpieza de platos</descripcion_trab>
             <cargo>Aseo</cargo>
         </trabajo>
     </trabajos>
 
     <idiomas>
         <idioma>
-            <nombre>Valencià</nombre>
+            <nombre_idioma>Valencià</nombre_idioma>
             <certificado>C2</certificado>
         </idioma>
     </idiomas>
 
     <habilidades>
-        <descripcion>Hacer la mandanga</descripcion>
-        <descripcion>Vender la mandanga</descripcion>
+        <habilidad>
+            <descripcion_habilidad>Hacer la mandanga</descripcion_habilidad>
+        </habilidad>
+        <habilidad>
+            <descripcion_habilidad>Vender la mandanga</descripcion_habilidad>
+        </habilidad>
     </habilidades>
 
 </curriculum>

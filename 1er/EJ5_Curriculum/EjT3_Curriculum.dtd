@@ -1,0 +1,33 @@
+<!ELEMENT curriculum (datos, formaciones, trabajos, idiomas, habilidades)>
+<!ATTLIST curriculum lang (es | en) #REQUIRED>
+
+<!ELEMENT datos (nombre, apellido, nacimiento, direccion, telf, correo, descripcion)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT nacimiento (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telf (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+
+<!ELEMENT formaciones (formacion*)>
+<!ELEMENT formacion (nombre_form, ano_form, notamedia)>
+<!ELEMENT nombre_form (#PCDATA)>
+<!ELEMENT ano_form (#PCDATA)>
+<!ELEMENT notamedia (#PCDATA)>
+
+<!ELEMENT trabajos (trabajo*)>
+<!ELEMENT trabajo (nombre_trab, ano_trab, descripcion_trab, cargo)>
+<!ELEMENT nombre_trab (#PCDATA)>
+<!ELEMENT ano_trab (#PCDATA)>
+<!ELEMENT descripcion_trab (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+
+<!ELEMENT idiomas (idioma+)>
+<!ELEMENT idioma (nombre_idioma, certificado)>
+<!ELEMENT nombre_idioma (#PCDATA)>
+<!ELEMENT certificado (#PCDATA) >
+
+<!ELEMENT habilidades (habilidad*)>
+<!ELEMENT habilidad (descripcion_habilidad)>
+<!ELEMENT descripcion_habilidad (#PCDATA)>
