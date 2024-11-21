@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE tickets SYSTEM "tickets.dtd">
+<tickets lang="es">
+    <articulos>
+        <articulo id="C24">
+            <nombre>Un simple palo</nombre>
+            <precio_base>799.99</precio_base>
+        </articulo>
+        <articulo id="C342">
+            <nombre>Motosierra</nombre>
+            <precio_base>200</precio_base>
+        </articulo>
+        <articulo id="C11">
+            <nombre>Teclado</nombre>
+            <precio_base>50</precio_base>
+        </articulo>
+        <articulo id="C115">
+            <nombre>Flotador</nombre>
+            <precio_base>10</precio_base>
+        </articulo>
+        <articulo id="C921">
+            <nombre>Remos</nombre>
+            <precio_base>20</precio_base>
+        </articulo>
+        <articulo id="C110">
+            <nombre>Bañador</nombre>
+            <precio_base>500</precio_base>
+        </articulo>
+        <articulo id="C001">
+            <nombre>Cegarro</nombre>
+            <precio_base>7</precio_base>
+        </articulo>
+    </articulos>
+    
+    <ticket>
+        <membrete cif="M3435678">
+            <razon_social>Doritos INC</razon_social>
+            <web_empresa>Ejemplo.com</web_empresa>
+            <nombre_sucursal cod_sucursal="A1">Benalmádena</nombre_sucursal>
+            <dir_sucursal>carrer de la poma 3</dir_sucursal>
+            <cod_postal_sucursal>35555</cod_postal_sucursal>
+            <poblacion_sucursal>Andorra</poblacion_sucursal>
+            <telf tipotelf="movil">61234567</telf>
+        </membrete>
+
+        <cabezera num_ticket="A23">
+            <fecha_ticket>12/05/24</fecha_ticket>
+            <hora_ticket>18:00</hora_ticket>
+            <nombre_empleado>Ramón Puig</nombre_empleado>
+        </cabezera>
+        
+        <lineas>
+            <linea cod_articulo="C24">
+                <cantidad_articulos>5</cantidad_articulos>
+                <desc_articulos>Un simple palo</desc_articulos>
+                <precio_final_unidad rebaja="si">799.98</precio_final_unidad>
+                <precio_original>799.99</precio_original>
+                <importe_precio>3999.99</importe_precio>
+            </linea>
+            <linea cod_articulo="C342">
+                <cantidad_articulos>2</cantidad_articulos>
+                <desc_articulos>Motosierra</desc_articulos>
+                <precio_final_unidad rebaja="no">200</precio_final_unidad>
+                <precio_original>200</precio_original>
+                <importe_precio>400</importe_precio>
+            </linea>
+            <linea cod_articulo="C11">
+                <cantidad_articulos>1</cantidad_articulos>
+                <desc_articulos>Teclado</desc_articulos>
+                <precio_final_unidad rebaja="no">50</precio_final_unidad>
+                <precio_original>50</precio_original>
+                <importe_precio>50</importe_precio>
+            </linea>
+        </lineas>
+
+        <resumen forma_pago="bizum">
+            <importe_total_ticket>4439.99</importe_total_ticket>
+        </resumen>
+
+    </ticket>
+    
+    <ticket>
+
+        <membrete cif="C1234188">
+            <razon_social>Pateras S.L</razon_social>
+            <web_empresa>Ejemplo2.com</web_empresa>
+            <nombre_sucursal cod_sucursal="A2">Jesus Pobre</nombre_sucursal>
+            <dir_sucursal>Murla 9</dir_sucursal>
+            <cod_postal_sucursal>04245</cod_postal_sucursal>
+            <poblacion_sucursal>si</poblacion_sucursal>
+            <telf tipotelf="fijo">91145607</telf>
+        </membrete>
+
+        <cabezera num_ticket="A57">
+            <fecha_ticket>29/05/24</fecha_ticket>
+            <hora_ticket>10:00</hora_ticket>
+            <nombre_empleado>Ramón Puig</nombre_empleado>
+        </cabezera>
+        
+        <lineas>
+            <linea cod_articulo="C115">
+                <cantidad_articulos>20</cantidad_articulos>
+                <desc_articulos>Flotador</desc_articulos>
+                <precio_final_unidad rebaja="si">9</precio_final_unidad>
+                <precio_original>10</precio_original>
+                <importe_precio>180</importe_precio>
+            </linea>
+            <linea cod_articulo="C921">
+                <cantidad_articulos>10</cantidad_articulos>
+                <desc_articulos>Remos</desc_articulos>
+                <precio_final_unidad rebaja="no">20</precio_final_unidad>
+                <precio_original>20</precio_original>
+                <importe_precio>200</importe_precio>
+            </linea>
+            <linea cod_articulo="C110">
+                <cantidad_articulos>1</cantidad_articulos>
+                <desc_articulos>Bañador</desc_articulos>
+                <precio_final_unidad rebaja="no">500</precio_final_unidad>
+                <precio_original>500</precio_original>
+                <importe_precio>500</importe_precio>
+            </linea>
+            <linea cod_articulo="C001">
+                <cantidad_articulos>1</cantidad_articulos>
+                <desc_articulos>Cegarro</desc_articulos>
+                <precio_final_unidad rebaja="no">7</precio_final_unidad>
+                <precio_original>7</precio_original>
+                <importe_precio>7</importe_precio>
+            </linea>
+            <linea cod_articulo="C24">
+                <cantidad_articulos>1</cantidad_articulos>
+                <desc_articulos>Un simple palo</desc_articulos>
+                <precio_final_unidad rebaja="si">799.98</precio_final_unidad>
+                <precio_original>799.99</precio_original>
+                <importe_precio>799.98</importe_precio>
+            </linea>
+        </lineas>
+
+        <resumen forma_pago="efectivo">
+            <importe_total_ticket>1686.98</importe_total_ticket>
+        </resumen>
+
+    </ticket>
+    
+</tickets>

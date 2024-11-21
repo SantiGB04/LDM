@@ -1,0 +1,61 @@
+<!ELEMENT tickets (articulos, ticket*)>
+<!ATTLIST tickets lang (es | en | ru | de | fr) #REQUIRED>
+
+<!ELEMENT articulos (articulo*)>
+
+<!ELEMENT articulo (nombre, precio_base)>
+<!ATTLIST articulo id ID #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio_base (#PCDATA)>
+
+
+
+<!ELEMENT ticket (membrete, cabezera, lineas, resumen)>
+
+<!ELEMENT membrete (razon_social, web_empresa, nombre_sucursal, dir_sucursal, cod_postal_sucursal, poblacion_sucursal, telf)>
+<!ATTLIST membrete cif ID #REQUIRED>
+
+<!ELEMENT razon_social (#PCDATA)>
+<!ELEMENT web_empresa (#PCDATA)>
+
+<!ELEMENT nombre_sucursal (#PCDATA)>
+<!ATTLIST nombre_sucursal cod_sucursal ID #REQUIRED>
+
+<!ELEMENT dir_sucursal (#PCDATA)>
+<!ELEMENT cod_postal_sucursal (#PCDATA)>
+<!ELEMENT poblacion_sucursal (#PCDATA)>
+
+<!ELEMENT telf (#PCDATA)>
+<!ATTLIST telf tipotelf (movil | fijo) #REQUIRED>
+
+
+
+<!ELEMENT cabezera (fecha_ticket, hora_ticket, nombre_empleado)>
+<!ATTLIST cabezera num_ticket ID #REQUIRED>
+
+<!ELEMENT fecha_ticket (#PCDATA)>
+<!ELEMENT hora_ticket (#PCDATA)>
+<!ELEMENT nombre_empleado (#PCDATA)>
+
+
+
+
+<!ELEMENT lineas (linea+)>
+
+<!ELEMENT linea (cantidad_articulos, desc_articulos, precio_final_unidad, precio_original, importe_precio)>
+<!ATTLIST linea cod_articulo IDREF #REQUIRED>
+
+<!ELEMENT cantidad_articulos (#PCDATA)>
+<!ELEMENT desc_articulos (#PCDATA)>
+
+<!ELEMENT precio_final_unidad (#PCDATA)>
+<!ATTLIST precio_final_unidad rebaja (si | no) #REQUIRED>
+
+<!ELEMENT precio_original (#PCDATA)>
+<!ELEMENT importe_precio (#PCDATA)>
+
+<!ELEMENT resumen (importe_total_ticket)>
+
+<!ATTLIST resumen forma_pago (bizum | efectivo | tarjeta) #REQUIRED>
+<!ELEMENT importe_total_ticket (#PCDATA)>
