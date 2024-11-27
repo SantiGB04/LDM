@@ -1,0 +1,43 @@
+<!ELEMENT facturas (productos,factura+)>
+<!ELEMENT productos (producto+)>
+<!ELEMENT producto (nombre_producto, descripcion_producto, precio_producto, porcentaje_IVA)>
+<!ATTLIST producto idproducto ID #REQUIRED>
+
+<!ELEMENT nombre_producto (#PCDATA)>
+<!ELEMENT descripcion_producto (#PCDATA)>
+<!ELEMENT precio_producto (#PCDATA)>
+<!ELEMENT porcentaje_IVA (#PCDATA)>
+
+<!ELEMENT factura (membrete, cliente, compra, resumen)>
+<!ATTLIST factura idfactura ID #REQUIRED>
+
+<!ELEMENT membrete (razon_social, direccion_empresa, cod_postal_empresa, poblacion_empresa, telf_empresa, email_empresa)>
+<!ATTLIST membrete cif CDATA #REQUIRED>
+
+<!ELEMENT razon_social (#PCDATA)>
+<!ELEMENT direccion_empresa (#PCDATA)>
+<!ELEMENT cod_postal_empresa (#PCDATA)>
+<!ELEMENT poblacion_empresa (#PCDATA)>
+<!ELEMENT telf_empresa (#PCDATA)>
+<!ELEMENT email_empresa (#PCDATA)>
+
+<!ELEMENT cliente (nombre_cliente, direccion_cliente, cod_postal_cliente, poblacion_cliente)>
+<!ATTLIST cliente dni_cliente CDATA #REQUIRED>
+
+<!ELEMENT nombre_cliente (#PCDATA)>
+<!ELEMENT direccion_cliente (#PCDATA)>
+<!ELEMENT cod_postal_cliente (#PCDATA)>
+<!ELEMENT poblacion_cliente (#PCDATA)>
+
+<!ELEMENT compra (prod_comprado+)>
+<!ELEMENT prod_comprado (cantidad_articulos, precio_total_producto)>
+<!ATTLIST prod_comprado id_prod_comprado IDREF #REQUIRED>
+
+<!ELEMENT cantidad_articulos (#PCDATA)>
+<!ELEMENT precio_total_producto (#PCDATA)>
+
+<!ELEMENT resumen (precio_total)>
+<!ATTLIST resumen tipo_pago (bizum | efectivo | tarjeta) #REQUIRED>
+<!ELEMENT precio_total (#PCDATA)>
+<!ATTLIST precio_total descuento (si | no) #REQUIRED
+                         valordescuento CDATA #REQUIRED>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas SYSTEM "facturas.dtd">
+
+<facturas>
+    <productos>
+        <producto idproducto="P1">
+            <nombre_producto>Un cegarro</nombre_producto>
+            <descripcion_producto>El auténtico cegarro de Miquel</descripcion_producto>
+            <precio_producto>3</precio_producto>
+            <porcentaje_IVA>75</porcentaje_IVA>
+        </producto>
+        <producto idproducto="P2">
+            <nombre_producto>Freidora </nombre_producto>
+            <descripcion_producto>Una freidora</descripcion_producto>
+            <precio_producto>110</precio_producto>
+            <porcentaje_IVA>21</porcentaje_IVA>
+        </producto>
+        <producto idproducto="P3">
+            <nombre_producto>Paquete de pipas</nombre_producto>
+            <descripcion_producto>Que me quedo sin come'</descripcion_producto>
+            <precio_producto>2</precio_producto>
+            <porcentaje_IVA>10</porcentaje_IVA>
+        </producto>
+        <producto idproducto="P4">
+            <nombre_producto>Mechero</nombre_producto>
+            <descripcion_producto>Para encender el cegarro</descripcion_producto>
+            <precio_producto>2</precio_producto>
+            <porcentaje_IVA>21</porcentaje_IVA>
+        </producto>
+        <producto idproducto="P5">
+            <nombre_producto>Cartera de dudosa procendecia</nombre_producto>
+            <descripcion_producto>La ha robado</descripcion_producto>
+            <precio_producto>1</precio_producto>
+            <porcentaje_IVA>0</porcentaje_IVA>
+        </producto>
+    </productos>
+
+    <factura idfactura="F12">
+        <membrete cif="B1353457">
+            <razon_social>Empresa INC</razon_social>
+            <direccion_empresa>Carrer de Miquel</direccion_empresa>
+            <cod_postal_empresa>00002</cod_postal_empresa>
+            <poblacion_empresa>Miquel Serra</poblacion_empresa>
+            <telf_empresa>66602252</telf_empresa>
+            <email_empresa>SerraMiquel@gmail.com</email_empresa>
+        </membrete>
+
+        <cliente dni_cliente="8863405A">
+            <nombre_cliente>Miquel Serra</nombre_cliente>
+            <direccion_cliente>Plaza de Miquel Serra 12</direccion_cliente>
+            <cod_postal_cliente>050556</cod_postal_cliente>
+            <poblacion_cliente>BeniMiquel Serra</poblacion_cliente>
+        </cliente>
+
+        <compra>
+            <prod_comprado id_prod_comprado="P1">
+                <cantidad_articulos>5</cantidad_articulos>
+                <precio_total_producto>15</precio_total_producto>
+            </prod_comprado>
+            <prod_comprado id_prod_comprado="P2">
+                <cantidad_articulos>2</cantidad_articulos>
+                <precio_total_producto>220</precio_total_producto>
+            </prod_comprado>
+            <prod_comprado id_prod_comprado="P5">
+                <cantidad_articulos>1</cantidad_articulos>
+                <precio_total_producto>1</precio_total_producto>
+            </prod_comprado>
+        </compra>
+
+        <resumen tipo_pago="tarjeta">
+            <precio_total descuento="no" valordescuento="0">236</precio_total>
+        </resumen>
+    </factura>
+
+    <factura idfactura="F56">
+        <membrete cif="B1353457">
+            <razon_social>Sardinas</razon_social>
+            <direccion_empresa>Carrer denose</direccion_empresa>
+            <cod_postal_empresa>000852</cod_postal_empresa>
+            <poblacion_empresa>Miquel Serra I</poblacion_empresa>
+            <telf_empresa>6698632</telf_empresa>
+            <email_empresa>MiquelSerra@gmail.com</email_empresa>
+        </membrete>
+
+        <cliente dni_cliente="8863405A">
+            <nombre_cliente>Miquel Serra</nombre_cliente>
+            <direccion_cliente>Plaza de Miquel Serra 12</direccion_cliente>
+            <cod_postal_cliente>050556</cod_postal_cliente>
+            <poblacion_cliente>BeniMiquel Serra</poblacion_cliente>
+        </cliente>
+
+        <compra>
+            <prod_comprado id_prod_comprado="P4">
+                <cantidad_articulos>2</cantidad_articulos>
+                <precio_total_producto>4</precio_total_producto>
+            </prod_comprado>
+            <prod_comprado id_prod_comprado="P3">
+                <cantidad_articulos>4</cantidad_articulos>
+                <precio_total_producto>8</precio_total_producto>
+            </prod_comprado>
+            <prod_comprado id_prod_comprado="P5">
+                <cantidad_articulos>1</cantidad_articulos>
+                <precio_total_producto>1</precio_total_producto>
+            </prod_comprado>
+        </compra>
+
+        <resumen tipo_pago="efectivo">
+            <precio_total descuento="si" valordescuento="2">13</precio_total>
+        </resumen>
+    </factura>
+</facturas>
