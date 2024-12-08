@@ -1,0 +1,110 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!DOCTYPE bloonsGame SYSTEM "bloonsgame.dtd">
+<bloonsGame>
+    <monos>
+        <mono id="M1" clase="tiraDardos">
+            <nombre>Mono Tirador de Dardos</nombre>
+            <daño>1</daño>
+            <experiencia>200</experiencia>
+            <precioCompra>170</precioCompra>
+            <precioVenta>85</precioVenta>
+            <rango>30</rango>
+            <velocidad>media</velocidad>
+        </mono>
+        <mono id="M2" clase="francotirador">
+            <nombre>Mono Francotirador</nombre>
+            <daño>2</daño>
+            <experiencia>300</experiencia>
+            <precioCompra>350</precioCompra>
+            <precioVenta>175</precioVenta>
+            <rango>infinito</rango>
+            <velocidad>lenta</velocidad>
+        </mono>
+    </monos>
+
+    <heroes>
+        <heroe id="H1" skin="clásico">
+            <nombre>Quincy</nombre>
+            <precioCompra>800</precioCompra>
+            <precioVenta>400</precioVenta>
+        </heroe>
+        <heroe id="H2" skin="alternativo">
+            <nombre>Gwendolin</nombre>
+            <precioCompra>1000</precioCompra>
+            <precioVenta>500</precioVenta>
+        </heroe>
+    </heroes>
+
+    <mapas>
+        <mapa>
+            <nombre>Mapa Fácil 1</nombre>
+            <recompensa>50</recompensa>
+            <categoria>facil</categoria>
+            <dificultad>facil</dificultad>
+            <modoJuego>normal</modoJuego>
+            <rondaMax>40</rondaMax>
+            <progreso>30</progreso>
+        </mapa>
+    </mapas>
+
+    <partida>
+        <rondas>
+            <actual>25</actual>
+            <total>40</total>
+        </rondas>
+        <estadoJugador>
+            <dinero>3200</dinero>
+            <vidasRestantes>50</vidasRestantes>
+        </estadoJugador>
+        <torresColocadas>
+            <torre>
+                <idMono>1</idMono>
+                <posicion>
+                    <x>100</x>
+                    <y>200</y>
+                </posicion>
+                <ramas>
+                    <rama>
+                        <nombre>Rama A</nombre>
+                        <nivel>2</nivel>
+                    </rama>
+                    <rama>
+                        <nombre>Rama B</nombre>
+                        <nivel>3</nivel>
+                    </rama>
+                </ramas>
+                <nivel>5</nivel>
+                <dañoAcumulado>450</dañoAcumulado>
+                <precioVenta>400</precioVenta>
+            </torre>
+            <torre>
+                <idMono>2</idMono>
+                <posicion>
+                    <x>300</x>
+                    <y>150</y>
+                </posicion>
+                <ramas>
+                    <rama>
+                        <nombre>Rama A</nombre>
+                        <nivel>1</nivel>
+                    </rama>
+                </ramas>
+                <nivel>2</nivel>
+                <dañoAcumulado>1200</dañoAcumulado>
+                <precioVenta>600</precioVenta>
+            </torre>
+        </torresColocadas>
+        <heroesUsados>
+            <heroeEnJuego>
+                <idHeroe>1</idHeroe>
+                <nivel>6</nivel>
+                <experienciaAcumulada>1500</experienciaAcumulada>
+                <posicion>
+                    <x>50</x>
+                    <y>50</y>
+                </posicion>
+                <precioVenta>400</precioVenta>
+            </heroeEnJuego>
+        </heroesUsados>
+    </partida>
+</bloonsGame>

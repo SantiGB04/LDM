@@ -1,0 +1,59 @@
+<!ELEMENT bloonsGame (monos, heroes, mapas, partida)>
+<!ELEMENT monos (mono+)>
+<!ELEMENT mono (nombre, daño, experiencia, precioCompra, precioVenta, rango, velocidad)>
+<!ATTLIST mono id ID #REQUIRED clase CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT daño (#PCDATA)>
+<!ELEMENT experiencia (#PCDATA)>
+<!ELEMENT precioCompra (#PCDATA)>
+<!ELEMENT precioVenta (#PCDATA)>
+<!ELEMENT rango (#PCDATA)>
+<!ELEMENT velocidad (#PCDATA)>
+
+<!ELEMENT heroes (heroe+)>
+<!ELEMENT heroe (nombre, nivel, experienciaAcumulada, precioCompra, precioVenta)>
+<!ATTLIST heroe id ID #REQUIRED skin CDATA #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT experienciaAcumulada (#PCDATA)>
+<!ELEMENT precioCompra (#PCDATA)>
+<!ELEMENT precioVenta (#PCDATA)>
+
+<!ELEMENT mapas (mapa)>
+<!ELEMENT mapa (nombre, recompensa, categoria, dificultad, modoJuego, rondaMax, progreso)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT dificultad (#PCDATA)>
+<!ELEMENT modoJuego (#PCDATA)>
+<!ELEMENT rondaMax (#PCDATA)>
+<!ELEMENT progreso (#PCDATA)>
+<!ELEMENT recompensa (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+
+<!ELEMENT partida (rondas, estadoJugador, torresColocadas, heroesUsados)>
+<!ELEMENT rondas (actual, total)>
+<!ELEMENT actual (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+
+<!ELEMENT estadoJugador (dinero, vidasRestantes)>
+<!ELEMENT dinero (#PCDATA)>
+<!ELEMENT vidasRestantes (#PCDATA)>
+
+<!ELEMENT torresColocadas (torre+)>
+<!ELEMENT torre (idMono, posicion, ramas, nivel, dañoAcumulado, precioVenta)>
+<!ELEMENT idMono (#PCDATA)>
+<!ELEMENT posicion (x, y)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+<!ELEMENT ramas (rama+)>
+<!ELEMENT rama (nombre, nivel)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT dañoAcumulado (#PCDATA)>
+<!ELEMENT precioVenta (#PCDATA)>
+
+<!ELEMENT heroesUsados (heroeEnJuego+)>
+<!ELEMENT heroeEnJuego (idHeroe, nivel, experienciaAcumulada, posicion, precioVenta)>
+<!ELEMENT idHeroe (#PCDATA)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT experienciaAcumulada (#PCDATA)>
+<!ELEMENT posicion (x, y)>
+<!ELEMENT precioVenta (#PCDATA)>
