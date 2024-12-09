@@ -1,59 +1,98 @@
-<!ELEMENT bloonsGame (monos, heroes, mapas, partida)>
+<!ELEMENT bloonsGame (monos, heroes, mapas, bloons, partidas)>
 <!ELEMENT monos (mono+)>
-<!ELEMENT mono (nombre, daño, experiencia, precioCompra, precioVenta, rango, velocidad)>
-<!ATTLIST mono id ID #REQUIRED clase CDATA #REQUIRED>
+<!ELEMENT mono (nombre, precioCompraMono, precioVentaMono, alcance)>
+<!ATTLIST   mono idMono ID #REQUIRED 
+            categoria (primario | militar | magia | apoyo) #REQUIRED
+            velocidadDisparo (lenta | media | rapida | ultrarapida) #REQUIRED>
+
 <!ELEMENT nombre (#PCDATA)>
-<!ELEMENT daño (#PCDATA)>
-<!ELEMENT experiencia (#PCDATA)>
-<!ELEMENT precioCompra (#PCDATA)>
-<!ELEMENT precioVenta (#PCDATA)>
-<!ELEMENT rango (#PCDATA)>
-<!ELEMENT velocidad (#PCDATA)>
+<!ELEMENT precioCompraMono (#PCDATA)>
+<!ELEMENT precioVentaMono (#PCDATA)>
+<!ELEMENT alcance (#PCDATA)>
+
+
 
 <!ELEMENT heroes (heroe+)>
-<!ELEMENT heroe (nombre, nivel, experienciaAcumulada, precioCompra, precioVenta)>
-<!ATTLIST heroe id ID #REQUIRED skin CDATA #IMPLIED>
-<!ELEMENT nombre (#PCDATA)>
-<!ELEMENT nivel (#PCDATA)>
-<!ELEMENT experienciaAcumulada (#PCDATA)>
-<!ELEMENT precioCompra (#PCDATA)>
-<!ELEMENT precioVenta (#PCDATA)>
+<!ELEMENT heroe (nombreHeroe, precioCompraHeroe, precioVentaHeroe, habilidades+, alcance, nivelMax)>
+<!ATTLIST heroe idHeroe ID #REQUIRED 
+          skin (clasico | alternativo | legendario) #REQUIRED
+          velocidadDisparo (lenta | media | rapida | ultrarapida) #REQUIRED>
+          
+<!ELEMENT nombreHeroe (#PCDATA)>
+<!ELEMENT precioCompraHeroe (#PCDATA)>
+<!ELEMENT precioVentaHeroe (#PCDATA)>
+<!ELEMENT habilidades (habilidad+)>
+<!ELEMENT habilidad (#PCDATA)>
+<!ATTLIST habilidad     idHabi ID #REQUIRED
+                        cooldown CDATA #REQUIRED>
 
-<!ELEMENT mapas (mapa)>
-<!ELEMENT mapa (nombre, recompensa, categoria, dificultad, modoJuego, rondaMax, progreso)>
-<!ELEMENT categoria (#PCDATA)>
-<!ELEMENT dificultad (#PCDATA)>
-<!ELEMENT modoJuego (#PCDATA)>
-<!ELEMENT rondaMax (#PCDATA)>
-<!ELEMENT progreso (#PCDATA)>
-<!ELEMENT recompensa (#PCDATA)>
-<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nivelMax (#PCDATA)>
 
-<!ELEMENT partida (rondas, estadoJugador, torresColocadas, heroesUsados)>
-<!ELEMENT rondas (actual, total)>
-<!ELEMENT actual (#PCDATA)>
-<!ELEMENT total (#PCDATA)>
 
-<!ELEMENT estadoJugador (dinero, vidasRestantes)>
-<!ELEMENT dinero (#PCDATA)>
+
+<!ELEMENT mapas (mapa+)>
+<!ELEMENT mapa (#PCDATA)>
+<!ATTLIST mapa idMapa ID #REQUIRED
+               nombre CDATA #REQUIRED
+               categoriaMapa (facil | medio | dificil) #REQUIRED
+               dificultadMapa (facil | medio | dificil | imposible) #REQUIRED
+               rondasTotales (40 | 60 | 80 | 100) #REQUIRED
+               vidasMapa (150 | 100 | 50 | 1) #REQUIRED
+               recompensa (150 | 250 | 500 | 1000) #REQUIRED>
+
+
+
+
+<!ELEMENT bloons (bloon+)>
+<!ELEMENT bloon (nombreBloon)>
+<!ELEMENT nombreBloon (#PCDATA)>
+
+<!ATTLIST   bloon idBloon ID #REQUIRED
+            velocidadMovimiento CDATA #REQUIRED
+            vidaBloon CDATA #REQUIRED
+            tipoBloon (normal | ceramico | camuflado | moab | emplomado) #REQUIRED>
+            
+
+
+
+<!ELEMENT partidas (partida+)>
+<!ELEMENT partida (estadoPartida, torresColocadas, heroeEnJuego, bloonsEnJuego)>
+<!ATTLIST partida   idPartida ID #REQUIRED
+                    idMapa IDREF #REQUIRED>
+<!ELEMENT estadoPartida (rondaActual, dineroJuego, vidasRestantes)>
+<!ELEMENT rondaActual (#PCDATA)>
+<!ELEMENT dineroJuego (#PCDATA)>
 <!ELEMENT vidasRestantes (#PCDATA)>
 
-<!ELEMENT torresColocadas (torre+)>
-<!ELEMENT torre (idMono, posicion, ramas, nivel, dañoAcumulado, precioVenta)>
-<!ELEMENT idMono (#PCDATA)>
-<!ELEMENT posicion (x, y)>
+<!ELEMENT torresColocadas (torre*)>
+<!ELEMENT torre (posicion, ramas*, experiencia*, danyoTorre?, bloonsAcumulado?)>
+<!ATTLIST torre idMono IDREF #REQUIRED>
+
+
+<!ELEMENT posicion (x,y)>
 <!ELEMENT x (#PCDATA)>
 <!ELEMENT y (#PCDATA)>
-<!ELEMENT ramas (rama+)>
-<!ELEMENT rama (nombre, nivel)>
-<!ELEMENT nivel (#PCDATA)>
-<!ELEMENT dañoAcumulado (#PCDATA)>
-<!ELEMENT precioVenta (#PCDATA)>
 
-<!ELEMENT heroesUsados (heroeEnJuego+)>
-<!ELEMENT heroeEnJuego (idHeroe, nivel, experienciaAcumulada, posicion, precioVenta)>
-<!ELEMENT idHeroe (#PCDATA)>
+<!ELEMENT ramas (rama*)>
+<!ELEMENT rama (nombreRama)>
+<!ATTLIST rama  nombreRama (A | B | C) #REQUIRED
+                nivelRama (1 | 2 | 3 | 4 ) #REQUIRED>
+<!ELEMENT nombreRama (#PCDATA)>
+<!ELEMENT nivelRama (#PCDATA)>
+
+
+<!ELEMENT experiencia (#PCDATA)>
+<!ELEMENT danyoTorre (#PCDATA)>
+<!ELEMENT bloonsAcumulado (#PCDATA)>
+
+<!ELEMENT heroeEnJuego (nivel, experienciaAcumulada, posicion)>
+<!ATTLIST heroeEnJuego idHeroe IDREF #REQUIRED>
+
 <!ELEMENT nivel (#PCDATA)>
 <!ELEMENT experienciaAcumulada (#PCDATA)>
-<!ELEMENT posicion (x, y)>
-<!ELEMENT precioVenta (#PCDATA)>
+
+<!ELEMENT bloonsEnJuego (bloonEnJuego+)>
+<!ELEMENT bloonEnJuego (cantidadBloons)>
+<!ATTLIST bloonEnJuego  idBloon IDREF #REQUIRED
+                        reforzado (si | no) #REQUIRED>
+<!ELEMENT cantidadBloons (#PCDATA)>

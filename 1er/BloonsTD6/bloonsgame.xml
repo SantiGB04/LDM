@@ -1,110 +1,151 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bloonsGame SYSTEM "bloonsgame.dtd">
 <bloonsGame>
     <monos>
-        <mono id="M1" clase="tiraDardos">
+        <mono idMono="Mono1" categoria="primario" velocidadDisparo="media">
             <nombre>Mono Tirador de Dardos</nombre>
-            <daño>1</daño>
-            <experiencia>200</experiencia>
-            <precioCompra>170</precioCompra>
-            <precioVenta>85</precioVenta>
-            <rango>30</rango>
-            <velocidad>media</velocidad>
+            <precioCompraMono>170</precioCompraMono>
+            <precioVentaMono>85</precioVentaMono>
+            <alcance>30</alcance>
         </mono>
-        <mono id="M2" clase="francotirador">
+        <mono idMono="Mono2" categoria="militar" velocidadDisparo="lenta">
             <nombre>Mono Francotirador</nombre>
-            <daño>2</daño>
-            <experiencia>300</experiencia>
-            <precioCompra>350</precioCompra>
-            <precioVenta>175</precioVenta>
-            <rango>infinito</rango>
-            <velocidad>lenta</velocidad>
+            <precioCompraMono>350</precioCompraMono>
+            <precioVentaMono>175</precioVentaMono>
+            <alcance>300</alcance>
+        </mono>
+        <mono idMono="Mono3" categoria="apoyo" velocidadDisparo="lenta">
+            <nombre>Platanar</nombre>
+            <precioCompraMono>1200</precioCompraMono>
+            <precioVentaMono>700</precioVentaMono>
+            <alcance>100</alcance>
         </mono>
     </monos>
 
     <heroes>
-        <heroe id="H1" skin="clásico">
-            <nombre>Quincy</nombre>
-            <precioCompra>800</precioCompra>
-            <precioVenta>400</precioVenta>
+        <heroe idHeroe="He1" skin="clasico" velocidadDisparo="rapida">
+            <nombreHeroe>Quincy</nombreHeroe>
+            <precioCompraHeroe>800</precioCompraHeroe>
+            <precioVentaHeroe>400</precioVentaHeroe>
+            <habilidades>
+                <habilidad idHabi="HB1" cooldown="40">Lluvia de flechas</habilidad>
+                <habilidad idHabi="HB2" cooldown="20">Aumento de velocidad de disparo</habilidad>
+            </habilidades>
+            <alcance>30</alcance>
+            <nivelMax>30</nivelMax>
         </heroe>
-        <heroe id="H2" skin="alternativo">
-            <nombre>Gwendolin</nombre>
-            <precioCompra>1000</precioCompra>
-            <precioVenta>500</precioVenta>
+        <heroe idHeroe="He2" skin="alternativo" velocidadDisparo="lenta">
+            <nombreHeroe>Benjamin</nombreHeroe>
+            <precioCompraHeroe>1000</precioCompraHeroe>
+            <precioVentaHeroe>500</precioVentaHeroe>
+            <habilidades>
+                <habilidad idHabi="HB3" cooldown="20">Dar más dinero por tiempo limitado</habilidad>
+            </habilidades>
+            <alcance>30</alcance>
+            <nivelMax>30</nivelMax>
         </heroe>
     </heroes>
 
     <mapas>
-        <mapa>
-            <nombre>Mapa Fácil 1</nombre>
-            <recompensa>50</recompensa>
-            <categoria>facil</categoria>
-            <dificultad>facil</dificultad>
-            <modoJuego>normal</modoJuego>
-            <rondaMax>40</rondaMax>
-            <progreso>30</progreso>
-        </mapa>
+        <mapa idMapa="Mapa1" nombre="Acuario" categoriaMapa="facil" dificultadMapa="dificil" rondasTotales="80" vidasMapa="100" recompensa="500"></mapa> 
+        <mapa idMapa="Mapa2" nombre="Volcan" categoriaMapa="dificil" dificultadMapa="imposible" rondasTotales="100" vidasMapa="1" recompensa="1000"></mapa>
     </mapas>
+    <bloons>
+        <bloon idBloon="Bl1" velocidadMovimiento="10" vidaBloon="10" tipoBloon="normal">
+            <nombreBloon>Bloon rojo</nombreBloon>
+        </bloon>
+        <bloon idBloon="Bl2" velocidadMovimiento="30" vidaBloon="50" tipoBloon="ceramico">
+            <nombreBloon>Bloon cerámico</nombreBloon>
+        </bloon>
+        <bloon idBloon="Bl3" velocidadMovimiento="20" vidaBloon="10" tipoBloon="camuflado">
+            <nombreBloon>Bloon camuflado</nombreBloon>
+        </bloon>
+        <bloon idBloon="Bl4" velocidadMovimiento="20" vidaBloon="500" tipoBloon="moab">
+            <nombreBloon>Bloon MOAB</nombreBloon>
+        </bloon>
+        <bloon idBloon="Bl5" velocidadMovimiento="20" vidaBloon="10" tipoBloon="emplomado">
+            <nombreBloon>Bloon emplomado</nombreBloon>
+        </bloon>
+    </bloons>
 
-    <partida>
-        <rondas>
-            <actual>25</actual>
-            <total>40</total>
-        </rondas>
-        <estadoJugador>
-            <dinero>3200</dinero>
-            <vidasRestantes>50</vidasRestantes>
-        </estadoJugador>
-        <torresColocadas>
-            <torre>
-                <idMono>1</idMono>
-                <posicion>
-                    <x>100</x>
-                    <y>200</y>
-                </posicion>
-                <ramas>
-                    <rama>
-                        <nombre>Rama A</nombre>
-                        <nivel>2</nivel>
-                    </rama>
-                    <rama>
-                        <nombre>Rama B</nombre>
-                        <nivel>3</nivel>
-                    </rama>
-                </ramas>
-                <nivel>5</nivel>
-                <dañoAcumulado>450</dañoAcumulado>
-                <precioVenta>400</precioVenta>
-            </torre>
-            <torre>
-                <idMono>2</idMono>
-                <posicion>
-                    <x>300</x>
-                    <y>150</y>
-                </posicion>
-                <ramas>
-                    <rama>
-                        <nombre>Rama A</nombre>
-                        <nivel>1</nivel>
-                    </rama>
-                </ramas>
-                <nivel>2</nivel>
-                <dañoAcumulado>1200</dañoAcumulado>
-                <precioVenta>600</precioVenta>
-            </torre>
-        </torresColocadas>
-        <heroesUsados>
-            <heroeEnJuego>
-                <idHeroe>1</idHeroe>
+    <partidas>
+        <partida idPartida="Pa1" idMapa="Mapa1">
+            <estadoPartida>
+                <rondaActual>45</rondaActual>
+                <dineroJuego>3200</dineroJuego>
+                <vidasRestantes>68</vidasRestantes>
+            </estadoPartida>
+
+            <torresColocadas>
+                <torre idMono="Mono1">
+                    <posicion>
+                        <x>100</x>
+                        <y>200</y>
+                    </posicion>
+                    <ramas>
+                        <rama nombreRama="A" nivelRama="2">
+                            <nombreRama>Catapulta</nombreRama>
+                        </rama>
+                        <rama nombreRama="B" nivelRama="3">
+                            <nombreRama>Velocidad más rápida</nombreRama>
+                        </rama>
+                    </ramas>
+                    <experiencia>5820</experiencia>
+                    <danyoTorre>10</danyoTorre>
+                    <bloonsAcumulado>450</bloonsAcumulado>
+                </torre>
+
+                <torre idMono="Mono2">
+                    <posicion>
+                        <x>300</x>
+                        <y>150</y>
+                    </posicion>
+                    <ramas>
+                        <rama nombreRama="C" nivelRama="2">
+                            <nombreRama>Disparo rápido</nombreRama>
+                        </rama>
+                    </ramas>
+                    <experiencia>5820</experiencia>
+                    <danyoTorre>30</danyoTorre>
+                    <bloonsAcumulado>160</bloonsAcumulado>
+                </torre>
+
+                <torre idMono="Mono3">
+                    <posicion>
+                        <x>50</x>
+                        <y>150</y>
+                    </posicion>
+                    <ramas>
+                        <rama nombreRama="C" nivelRama="4">
+                            <nombreRama>Fábrica de platanos</nombreRama>
+                        </rama>
+                        <rama nombreRama="B" nivelRama="2">
+                            <nombreRama>50% más de dinero</nombreRama>
+                        </rama>
+                    </ramas>
+                    <experiencia>4210</experiencia>
+                </torre>
+
+            </torresColocadas>
+            <heroeEnJuego idHeroe="He1">
                 <nivel>6</nivel>
                 <experienciaAcumulada>1500</experienciaAcumulada>
                 <posicion>
                     <x>50</x>
                     <y>50</y>
                 </posicion>
-                <precioVenta>400</precioVenta>
             </heroeEnJuego>
-        </heroesUsados>
-    </partida>
+            <bloonsEnJuego>
+                <bloonEnJuego idBloon="Bl1" reforzado="no">
+                    <cantidadBloons>47</cantidadBloons>
+                </bloonEnJuego>
+                <bloonEnJuego idBloon="Bl4" reforzado="si">
+                    <cantidadBloons>1</cantidadBloons>
+                </bloonEnJuego>
+                <bloonEnJuego idBloon="Bl5" reforzado="no">
+                    <cantidadBloons>10</cantidadBloons>
+                </bloonEnJuego>
+            </bloonsEnJuego> 
+        </partida>
+    </partidas>
 </bloonsGame>
