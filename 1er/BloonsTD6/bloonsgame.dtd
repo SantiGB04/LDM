@@ -78,7 +78,7 @@
 <!ATTLIST rama  nombreRama (A | B | C) #REQUIRED
                 nivelRama (1 | 2 | 3 | 4 ) #REQUIRED>
 <!ELEMENT nombreRama (#PCDATA)>
-<!ELEMENT nivelRama (#PCDATA)>
+<!ELEMENT nivelRama (#PCDATA)> 
 
 
 <!ELEMENT experiencia (#PCDATA)>
