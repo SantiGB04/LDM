@@ -15,6 +15,14 @@
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+
+
+
+
+
+
+
+            
             <xs:attribute name="lang" type="xs:string" use="required" />
         </xs:complexType>
     </xs:element>
